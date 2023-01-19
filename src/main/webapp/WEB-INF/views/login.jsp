@@ -2,7 +2,11 @@
 	pageEncoding="ISO-8859-1"%>
 
 <%
-String red = (String) request.getAttribute("errMess");
+String red = (String) request.getAttribute("errmsg");
+%>
+
+<%
+String green = (String) request.getAttribute("msg");
 %>
 
 
@@ -23,6 +27,21 @@ String red = (String) request.getAttribute("errMess");
 <title>Insert title here</title>
 </head>
 <body class=" bg-light">
+
+
+	<%
+	if (green != null && !green.isEmpty()) {
+	%>
+	<div class="alert alert-success" role="alert">
+		<%=green%>
+	</div>
+	<%
+	}
+	%>
+
+
+
+
 	<%
 	if (red != null) {
 	%>

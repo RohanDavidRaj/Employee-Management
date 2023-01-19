@@ -1,5 +1,8 @@
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ include file="navbar.jsp" %>
+
 <%
 String msg = (String) request.getAttribute("name");
 %>
@@ -18,12 +21,17 @@ String msg = (String) request.getAttribute("name");
 <title>Insert title here</title>
 </head>
 <body>
-	<h1 class="display-1 text-center bg-info">Wel-Come</h1> <br>
-<br>
-<br>
-<p class="display-4 text-center"> Hi <mark><%=msg.toUpperCase() %></mark> How are you.....</p>
+	<h1 class="display-1 text-center bg-info">WelCome</h1>
+	<br>
+	<br>
+	<br>
+	<p class="display-4 text-center">
+		Hi
+		<mark><%=msg.toUpperCase()%></mark>
+		How are you.....
+	</p>
 
-	
-	
+
+
 </body>
 </html>
